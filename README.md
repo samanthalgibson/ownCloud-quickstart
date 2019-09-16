@@ -1,6 +1,7 @@
 # Quickstart guide for installing and using ownCloud
 ## Install with Docker
 ###  System Requirements
+
 | Platform | Options |
 | -------------- | -------- |
 | Docker Engine          | 1.12.0+    |
@@ -43,6 +44,7 @@ ADMIN_PASSWORD=admin
 HTTP_PORT=8080
 ```
 Configuration setting descriptions
+
 | **Setting Name** | **Description**               | **Example** |
 | ---------------- | ----------------------------- | ----------- |
 | OWNCLOUD_VERSION | The ownCloud version      | latest      |
@@ -69,6 +71,7 @@ It can take a few minutes for ownCloud to be fully functional even when all cont
 
 ## Install with OpenShift
 ###  System Requirements
+
 | Platform | Options |
 | -------------- | -------- |
 | OpenShift          | 3.x+    |
