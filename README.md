@@ -1,7 +1,6 @@
 # Quickstart guide for installing and using ownCloud
 ## Install with Docker
 ###  System Requirements
-
 | Platform | Options |
 | -------------- | -------- |
 | Docker Engine          | 1.12.0+    |
@@ -44,7 +43,6 @@ ADMIN_PASSWORD=admin
 HTTP_PORT=8080
 ```
 Configuration setting descriptions
-
 | **Setting Name** | **Description**               | **Example** |
 | ---------------- | ----------------------------- | ----------- |
 | OWNCLOUD_VERSION | The ownCloud version      | latest      |
@@ -71,7 +69,6 @@ It can take a few minutes for ownCloud to be fully functional even when all cont
 
 ## Install with OpenShift
 ###  System Requirements
-
 | Platform | Options |
 | -------------- | -------- |
 | OpenShift          | 3.x+    |
@@ -99,23 +96,23 @@ oc apply -n openshift -f https://raw.githubusercontent.com/owncloud-docker/opens
 ##### 2. Navigate to the users section
 Once successfully logged in you will see a page like the image below, the red arrow in the image indicates the button with your username that you must click to give you options for creating a new user.
 
-![](./images\Image 1.PNG)
+![](.\images\navigate_to_users_section.png)
 
-![](./images\image 2.1.png)
+
 
 ##### 3. Create a new user
 * Enter the new user's **Login Name** and their **E-Mail**
 * Assign **group** membership (optional)
 * Click the **Create** button 
 
-![](./images\create_user.png)
+![](./images\create_a_new_user.png)
 
 *Login names may contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_), periods (.) and at signs (@).*
 
 ##### 4. Set password and change users full name
 You will now see your newly created user, from this pane you can set a **password** and change the users full name or leave it for the user to complete.
 
-![](./images\create_user_password.png)
+![](.\images\set_password_and_change_users_full_name.png)
 
 
 
@@ -132,22 +129,24 @@ If launching for the first time, the ownCloud connection wizard should load. If 
 ##### 3. Enter ownCloud server address
 Acquire the server address from your ownCloud administrator
 
-TODO - screenshot
+<img src=".\images\enter_owncloud_server_address.PNG" style="zoom:80%;" />
 
 ##### 4. Log in using your supplied username and password
 If you are unsure of your username and password, please contact your ownCloud administrator.
 
-TODO - screenshot
+![](.\images\log_in_using_your_supplied_username_and_password.PNG)
 
 ##### 5. Choose synchronisation settings
 
-TODO - screenshot
+If you are unsure of what you need to sync, choose the recommended option.
+
+<img src=".\images\choose_synchronisation_settings.png" style="zoom:80%;" />
 
 
 
+Click connect and you can then see that the user will be connected and synced.
 
-
-
+<img src=".\images\final_sync_check.PNG" style="zoom:80%;" />
 
 
 
