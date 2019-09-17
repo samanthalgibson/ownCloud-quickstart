@@ -1,6 +1,6 @@
 # How to create a new user account as an administrator:
 
-#### 1. Log in to your ownCloud server web interface as an administrator
+#### 1. Log in to your ownCloud server web UI as an administrator
 
 #### 2. Navigate to the users section
 Once successfully logged in you will see a page like the image below, the red arrow's in the image indicate the button with your username and the user's button that you must click to give you options for creating a new user.

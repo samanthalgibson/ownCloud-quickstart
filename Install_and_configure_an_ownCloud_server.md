@@ -8,7 +8,7 @@
 | Docker Engine | 1.12.0+ |
 
 ### Installation
-The following quickstart guide allows you to install and configure an ownCloud server in 4 easy steps using Docker.
+Install and configure an ownCloud server in 4 easy steps using Docker.
 
 #### 1. Create and change project directory
 ```
@@ -55,11 +55,11 @@ docker-compose up -d
 ```
 
 ### Verify Installation
-When the process completes, check all the containers have successfully started by running `docker-compose ps` If the containers are all working correctly, you should expect to see output similar to what is below:
+When the process completes, check all the containers have successfully started by running `docker-compose ps`. If the containers are all working correctly, you should expect to see output similar to what is below:
 
 ![](./images/docker_verify_installation.PNG)
 
-In the image you can see that the Database, ownCloud, and Redis containers are running and that ownCloud is accessible via port 8080 on the host machine.
+In the image you can see that the database, ownCloud, and Redis containers are running and that ownCloud is accessible via port 8080 on the host machine.
 
 It can take a few minutes for ownCloud to be fully functional even when all containers are running. You can run `docker-compose logs --follow owncloud` to see if there are significant amounts of information logging to the console, if there is then wait for this to slow down before attempting access to the web UI.
 
@@ -69,10 +69,10 @@ It can take a few minutes for ownCloud to be fully functional even when all cont
 
 | Platform  | Options |
 | --------- | ------- |
-| OpenShift | 3.x+    |
+| OpenShift | 3.x     |
 
 ### Installation
-The following quickstart guide allows you to install and configure an ownCloud server in OpenShift 3. This guide assumes you already have an OpenShift cluster. If not, look at the [OpenShift installation documentation](https://docs.openshift.com/container-platform/3.11/getting_started/install_openshift.html).
+Install and configure an ownCloud server in OpenShift 3. This guide assumes you already have an OpenShift cluster. If not, look at the [OpenShift installation documentation](https://docs.openshift.com/container-platform/3.11/getting_started/install_openshift.html).
 
 #### 1. Log in to OpenShift with administrator access
 ```
@@ -84,7 +84,7 @@ oc login <cluster host> -u <admin username> -p <admin password>
 oc apply -n openshift -f https://raw.githubusercontent.com/owncloud-docker/openshift/master/persistent.json
 ```
 
-#### 3. Open and log in to your OpenShift web console
+#### 3. Open and log in to your OpenShift web UI
 
 #### 4. Select ownCloud (Persistent) 
 ![](.\images\openshift_select_owncloud_persistent.png)
