@@ -64,7 +64,7 @@ docker-compose up -d
 ### Verify Installation
 When the process completes, check all the containers have successfully started by running `docker-compose ps` If the containers are all working correctly, you should expect to see output similar to what is below:
 
-![](./images/verify_installation.PNG)
+![](./images/docker_verify_installation.PNG)
 
 In the image you can see that the Database, ownCloud, and Redis containers are running and that ownCloud is accessible via port 8080 on the host machine.
 
@@ -91,18 +91,40 @@ oc login <cluster host> -u <admin username> -p <admin password>
 oc apply -n openshift -f https://raw.githubusercontent.com/owncloud-docker/openshift/master/persistent.json
 ```
 
-##### 3. Open and log in your OpenShift web console
+##### 3. Open and log in to your OpenShift web console
+
+##### 4. Select ownCloud (Persistent) 
+![](.\images\openshift_select_owncloud_persistent.png)
+
+##### 5. Click next on setup wizard
+##### 6. Enter configuration settings
+* Enter OpenShift **Project Name**.
+* Enter **ownCloud Domain**.
+* Change **ownCloud Volume Capacity** to required capacity.
+* Change the **ownCloud Admin Username and Password**.
+* Click the **Create** button.
+
+<img src=".\images\openshift_enter_configuration_settings_1.png" style="zoom:80%;" />
+<img src=".\images\openshift_enter_configuration_settings_2.png" style="zoom:80%;" />
+
+##### 6. Close configuration wizard
+<img src=".\images\openshift_close_configuration_wizard.png" style="zoom: 67%;" />
+
+### Verify Installation
+Open the new OpenShift project name you specified in the setup wizard, it can take a few minutes for the pods to start up. If the pods are running, you should expect to see output similar to what is below:
+
+![](.\images\openshift_verify_installation.png)
 
 
 
 ## How to create a new user account as an administrator:
 
-##### 1. Log into your ownCloud server web interface as an administrator
+##### 1. Log in to your ownCloud server web interface as an administrator
 
 ##### 2. Navigate to the users section
 Once successfully logged in you will see a page like the image below, the red arrow's in the image indicate the button with your username and the user's button that you must click to give you options for creating a new user.
 
-![](.\images\navigate_to_users_section.png)
+![](.\images\owncloud_navigate_to_users_section.png)
 
 
 
@@ -111,14 +133,14 @@ Once successfully logged in you will see a page like the image below, the red ar
 * Assign **group** membership (optional).
 * Click the **Create** button. 
 
-![](./images\create_a_new_user.png)
+![](./images\owncloud_create_a_new_user.png)
 
 *Login names may contain letters (a-z, A-Z), numbers (0-9), dashes (-), underscores (_), periods (.) and at signs (@).*
 
 ##### 4. Set password and change users full name
 You will now see your newly created user, from this pane you can set a **password** and change the users full name or leave it for the user to complete.
 
-![](.\images\set_password_and_change_users_full_name.png)
+![](.\images\owncloud_set_password_and_change_users_full_name.png)
 
 
 
@@ -135,24 +157,24 @@ If launching for the first time, the ownCloud connection wizard should load. If 
 ##### 3. Enter ownCloud server address
 Acquire the server address from your ownCloud administrator.
 
-<img src=".\images\enter_owncloud_server_address.PNG" style="zoom:80%;" />
+<img src=".\images\owncloud_enter_owncloud_server_address.PNG" style="zoom:80%;" />
 
 ##### 4. Log in using your supplied username and password
 If you are unsure of your username and password, please contact your ownCloud administrator.
 
-![](.\images\log_in_using_your_supplied_username_and_password.PNG)
+![](.\images\owncloud_log_in_using_your_supplied_username_and_password.PNG)
 
 ##### 5. Choose synchronisation settings
 
 If you are unsure of what you need to sync, choose the recommended option.
 
-<img src=".\images\choose_synchronisation_settings.png" style="zoom:80%;" />
+<img src=".\images\owncloud_choose_synchronisation_settings_1.png" style="zoom:80%;" />
 
 
 
 Click connect and you can then see that the user will be connected and synced.
 
-<img src=".\images\final_sync_check.PNG" style="zoom:80%;" />
+<img src=".\images\owncloud_choose_synchronisation_settings_2.PNG" style="zoom:80%;" />
 
 
 
