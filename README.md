@@ -1,5 +1,7 @@
-# Quickstart guide for installing and using ownCloud
-## Install with Docker
+# ownCloud Quickstart
+
+This quickstart guide will enable you to install an ownCloud server through either Docker or OpenShift, it walks you through adding new users and connecting to the server through the ownCloud Desktop Client.
+## Option 1 - Install with Docker
 ###  System Requirements
 
 | Platform | Options |
@@ -60,16 +62,16 @@ docker-compose up -d
 ```
 
 ### Verify Installation
-When the process completes, check all the containers have successfully started, by running `docker-compose ps` If the containers are all working correctly, you should expect to see output similar to what is below:
+When the process completes, check all the containers have successfully started by running `docker-compose ps` If the containers are all working correctly, you should expect to see output similar to what is below:
 
 ![](./images/verify_installation.PNG)
 
-In the image you can see that the Database, ownCloud, and Redis containers are running, and that ownCloud is accessible via port 8080 on the host machine.
+In the image you can see that the Database, ownCloud, and Redis containers are running and that ownCloud is accessible via port 8080 on the host machine.
 
-It can take a few minutes for ownCloud to be fully functional even when all containers are running. you can run `docker-compose logs --follow owncloud` to see if there are significant amounts of information logging to the console, if there is then wait for this to slow down before attempting access to the web UI.
+It can take a few minutes for ownCloud to be fully functional even when all containers are running. You can run `docker-compose logs --follow owncloud` to see if there are significant amounts of information logging to the console, if there is then wait for this to slow down before attempting access to the web UI.
 
 
-## Install with OpenShift
+## Option 2 - Install with OpenShift
 ###  System Requirements
 
 | Platform | Options |
@@ -77,7 +79,7 @@ It can take a few minutes for ownCloud to be fully functional even when all cont
 | OpenShift          | 3.x+    |
 
 ### Installation
-The following quickstart guide allows you to install and configure an ownCloud server in OpenShift 3. This guide assumes you already have a running OpenShift cluster. If not, look at how to [install ownCloud with Docker](TODO) or the [OpenShift installation documentation](https://docs.openshift.com/container-platform/3.11/getting_started/install_openshift.html).
+The following quickstart guide allows you to install and configure an ownCloud server in OpenShift 3. This guide assumes you already have a running OpenShift cluster. If not, look at how to [install ownCloud with Docker](#Option-1-Install-with-Docker) or the [OpenShift installation documentation](https://docs.openshift.com/container-platform/3.11/getting_started/install_openshift.html).
 
 ##### 1. Log in to OpenShift with administrator access
 ```
@@ -92,21 +94,22 @@ oc apply -n openshift -f https://raw.githubusercontent.com/owncloud-docker/opens
 ##### 3. Open and log in your OpenShift web console
 
 
+
 ## How to create a new user account as an administrator:
 
 ##### 1. Log into your ownCloud server web interface as an administrator
 
 ##### 2. Navigate to the users section
-Once successfully logged in you will see a page like the image below, the red arrow in the image indicates the button with your username that you must click to give you options for creating a new user.
+Once successfully logged in you will see a page like the image below, the red arrow's in the image indicate the button with your username and the user's button that you must click to give you options for creating a new user.
 
 ![](.\images\navigate_to_users_section.png)
 
 
 
 ##### 3. Create a new user
-* Enter the new user's **Login Name** and their **E-Mail**
-* Assign **group** membership (optional)
-* Click the **Create** button 
+* Enter the new user's **Login Name** and their **E-Mail**.
+* Assign **group** membership (optional).
+* Click the **Create** button. 
 
 ![](./images\create_a_new_user.png)
 
@@ -120,17 +123,17 @@ You will now see your newly created user, from this pane you can set a **passwor
 
 
 
-## How do I connect to the ownCloud server using a desktop or mobile client?
+## How to connect to the ownCloud server using a desktop client:
 
 ##### 1. Download and install the ownCloud Desktop Client
-* Download the Desktop Client for your operating system https://owncloud.org/download/#owncloud-desktop-client
+* Download the Desktop Client for your operating system [https://owncloud.org/download/#owncloud-desktop-client]()
 * Install using the ownCloud setup wizard
 
 ##### 2. Launch ownCloud Desktop Client connection wizard
 If launching for the first time, the ownCloud connection wizard should load. If it does not, left-click the ownCloud systray icon.
 
 ##### 3. Enter ownCloud server address
-Acquire the server address from your ownCloud administrator
+Acquire the server address from your ownCloud administrator.
 
 <img src=".\images\enter_owncloud_server_address.PNG" style="zoom:80%;" />
 
@@ -150,6 +153,18 @@ If you are unsure of what you need to sync, choose the recommended option.
 Click connect and you can then see that the user will be connected and synced.
 
 <img src=".\images\final_sync_check.PNG" style="zoom:80%;" />
+
+
+
+## Additional information
+
+For further information see documentation links below.
+
+
+* [ownCloud Server Documentation](https://doc.owncloud.org/server/10.2/)
+* [Desktop client user manual](https://doc.owncloud.org/desktop/2.5/)
+* [iOS app manual](https://doc.owncloud.org/ios/)
+* [Android app manual](https://doc.owncloud.org/android/)
 
 
 
