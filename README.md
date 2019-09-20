@@ -1,1 +1,1 @@
-Please see ownCloud quickstart guide on GitHub pages - [https://samanthalgibson.github.io/ownCloud-quickstart]()
+Please see ownCloud quickstart guide on GitHub pages - [https://samanthalgibson.github.io/ownCloud-quickstart](https://samanthalgibson.github.io/ownCloud-quickstart)
